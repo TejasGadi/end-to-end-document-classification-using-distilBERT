@@ -26,14 +26,14 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            files_dir = os.listdir('E:/Data_Science/Newsgroup_Classification_end_to_end/notebook/data/')
+            files_dir = os.listdir('./dataset/')
 
             df = pd.DataFrame(columns =['filename', 'class', 'text', 'preprocessed_text', 'preprocessed_email', 'preprocessed_subject'])
             for docfiles in tqdm(files_dir):
                 class_name = str(docfiles)
-                docfiles = os.listdir('E:/Data_Science/Newsgroup_Classification_end_to_end/notebook/data/'+docfiles)
+                docfiles = os.listdir('./dataset'+docfiles)
                 for docfile in docfiles:
-                    with open(f"{'E:/Data_Science/Newsgroup_Classification_end_to_end/notebook/data/'+class_name+'/'+docfile}", 'r', encoding = 'latin-1') as doc:
+                    with open(f"{'./dataset/'+class_name+'/'+docfile}", 'r', encoding = 'latin-1') as doc:
                         txt = doc.read()
                         df = df.append({'filename' : '/content/20_newsgroup/'+class_name+'/'+docfile, 'class' : class_name, 'text' : txt}, ignore_index = True)
 
