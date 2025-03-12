@@ -1,4 +1,4 @@
-## Newsgroup Classification project using BERT and CI-CD pipelines
+## Newsgroup Classification project using DistilBERT and CI-CD pipelines
 
 - This is an end-to-end production-grade machine learning project using BERT Classifier, GitHub Actions, Flask Framework, Docker, and AWS Deployment. 
 - Used the 20 Newsgroup Dataset from Kaggle which is a multi-class classification problem. 
